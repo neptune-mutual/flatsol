@@ -1,0 +1,20 @@
+{
+  "name": "flatsol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "flatsol": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neptune-mutual/flatsol.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/neptune-mutual/flatsol/issues"
+  },
+  "homepage": "https://github.com/neptune-mutual/flatsol#readme"
+}
