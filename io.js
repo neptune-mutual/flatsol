@@ -26,7 +26,7 @@ const searchFile = async (onDirectory, toFind, matches = []) => {
     const stat = await fs.lstat(currentPath)
 
     if (stat.isDirectory()) {
-      searchFile(currentPath, toFind, matches)
+      await searchFile(currentPath, toFind, matches)
     }
 
     if (result[i].toLowerCase() === toFind.toLowerCase()) {

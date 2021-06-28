@@ -23,7 +23,7 @@ const flatten = async (contents, instruction) => {
 
     if (!toImport) {
       Promise.reject(new Error(`Invalid path: ${path}`))
-      return contents
+      return null
     }
 
     return await flatten(contents, { match: matched, toImport })
