@@ -3,9 +3,9 @@ const fs = require('fs').promises
 
 const rootDir = process.cwd()
 
-const pathExists = async (path) => {
+const pathExists = async (p) => {
   try {
-    await fs.access(path, fs.F_OK)
+    await fs.access(p, fs.F_OK)
     return true
   } catch { }
 
@@ -21,7 +21,7 @@ const searchFile = async (onDirectory, toFind, matches = []) => {
 
   const result = await fs.readdir(onDirectory)
 
-  for (let i = 0; i < result.length; i++) {
+  for (const i in result) {
     const currentPath = path.join(onDirectory, result[i])
     const stat = await fs.lstat(currentPath)
 
@@ -37,8 +37,8 @@ const searchFile = async (onDirectory, toFind, matches = []) => {
   return matches[0]
 }
 
-const readFile = async (path) => {
-  const contents = await fs.readFile(path)
+const readFile = async (file) => {
+  const contents = await fs.readFile(file)
   return contents.toString() || ''
 }
 

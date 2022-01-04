@@ -26,7 +26,7 @@ const flatten = async (contents, instruction) => {
       return null
     }
 
-    return await flatten(contents, { match: matched, toImport })
+    return flatten(contents, { match: matched, toImport })
   }
 
   return contents
